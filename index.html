@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#flights">Flights</a></li>
+            <li><a href="#track-booking">Track Booking</a></li>
+            <li><a href="#view-history">View Booking History</a></li>
+            <li><a href="#cancel-booking">Cancel Flight</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#price-prediction">Price Prediction</a></li>
+            <li><a href="#customer-insights">Customer Insights</a></li>
+            <li><a href="#travel-recommendations">Travel Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <h1>Welcome to Our Flight Booking Website</h1>
+        <p>Find and book flights from the best airlines around the world!</p>
+    </div>
+
+    <!-- Flights Page -->
+    <div id="flights" class="page">
+        <h2>Book Your Flight</h2>
+        <form id="booking-form">
+            <label for="from-city">From:</label>
+            <select id="from-city" required>
+                <option value="" disabled selected>Select Departure City</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Miami">Miami</option>
+            </select><br><br>
+
+            <label for="to-city">To:</label>
+            <select id="to-city" required>
+                <option value="" disabled selected>Select Destination City</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sydney">Sydney</option>
+            </select><br><br>
+
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" min="1" required><br><br>
+
+            <label for="travel-date">Travel Date:</label>
+            <input type="date" id="travel-date" required><br><br>
+
+            <label for="seat-selection">Seat Selection:</label>
+            <select id="seat-selection" required>
+                <option value="" disabled selected>Select Seat</option>
+                <option value="Window">Window</option>
+                <option value="Aisle">Aisle</option>
+                <option value="Middle">Middle</option>
+            </select><br><br>
+
+            <label for="meal-preference">Meal Preference:</label>
+            <select id="meal-preference" required>
+                <option value="" disabled selected>Select Meal</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Gluten-Free">Gluten-Free</option>
+            </select><br><br>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Flight Price Prediction Section -->
+    <div id="price-prediction" class="page">
+        <h2>Flight Price Prediction</h2>
+        <p>We use historical data and trends to predict flight prices. Get an estimate of the price for your desired route.</p>
+        <form id="price-prediction-form">
+            <label for="from-city-pred">From:</label>
+            <select id="from-city-pred" required>
+                <option value="" disabled selected>Select Departure City</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Miami">Miami</option>
+            </select><br><br>
+
+            <label for="to-city-pred">To:</label>
+            <select id="to-city-pred" required>
+                <option value="" disabled selected>Select Destination City</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sydney">Sydney</option>
+            </select><br><br>
+
+            <label for="travel-date-pred">Travel Date:</label>
+            <input type="date" id="travel-date-pred" required><br><br>
+
+            <button type="submit">Get Price Prediction</button>
+        </form>
+        <p id="predicted-price">Estimated Price: $500</p>
+    </div>
+
+    <!-- Customer Behavior Insights Section -->
+    <div id="customer-insights" class="page">
+        <h2>Customer Behavior Insights</h2>
+        <p>Based on your travel preferences and booking history, we provide insights and analytics to improve your booking experience.</p>
+        <!-- Insert customer insights content here, like graphs, statistics, or trends -->
+    </div>
+
+    <!-- Travel Recommendations Section -->
+    <div id="travel-recommendations" class="page">
+        <h2>Personalized Travel Recommendations</h2>
+        <p>Based on your past travels and preferences, we suggest these destinations:</p>
+        <ul>
+            <li>Explore the best of London</li>
+            <li>Enjoy the beaches in Sydney</li>
+            <li>Experience the culture of Paris</li>
+            <!-- Add more recommendations dynamically -->
+        </ul>
+    </div>
+    
+    <!-- Flight Details Page -->
+    <div id="flight-details" class="page">
+        <h2>Flight Details</h2>
+        <p id="flight-info"></p>
+    </div>
+
+    <!-- Booking Confirmation Page -->
+    <div id="confirmation" class="page">
+        <h2>Booking Confirmation</h2>
+        <p id="confirmation-message"></p>
+    </div>
+
+    <!-- Track Booking Page -->
+    <div id="track-booking" class="page">
+        <h2>Track Your Booking</h2>
+        <form id="track-booking-form">
+            <input type="text" id="booking-id" placeholder="Enter Booking ID" required />
+            <button type="submit">Track</button>
+        </form>
+    </div>
+
+    <!-- Track Booking Status Page -->
+    <div id="track-booking-status" class="page">
+        <h2>Booking Status</h2>
+        <p>Your booking details will be shown here once you enter a valid booking ID.</p>
+    </div>
+
+    <!-- View Booking History Page -->
+    <div id="view-history" class="page">
+        <h2>Booking History</h2>
+        <ul id="booking-history"></ul>
+    </div>
+
+    <!-- Cancel Booking Page -->
+    <div id="cancel-booking" class="page">
+        <h2>Cancel Your Booking</h2>
+        <form id="cancel-booking-form">
+            <input type="text" id="cancel-booking-id" placeholder="Enter Booking ID to Cancel" required />
+            <button type="submit">Cancel Booking</button>
+        </form>
+        <p id="cancel-message"></p>
+    </div>
+
+    <!-- Customer Support - Contact Us Page -->
+    <div id="contact-us" class="page">
+        <h2>Customer Support - Contact Us</h2>
+        <p>If you have any questions or need assistance, please reach out to our support team at:</p>
+        <p>Email: support@flightbooking.com</p>
+        <p>Phone: +1 (800) 555-1234</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
